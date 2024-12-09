@@ -6,10 +6,105 @@ const login = require("../handlers/userAuth");
 const logout = require("../handlers/userAuth");
 const data = require("../handlers/userAuth");
 
-router.post("/signup", signup.signupFunction);
-router.post("/login", login.loginFunction);
-router.post("/logout", logout.logoutFunction);
-router.post("/data", data.getDataFunction);
-router.get("/userData/:username", data.getUserDataFunction);
+// Add CORS headers dynamically for each route
+router.post(
+  "/signup",
+  (req, res, next) => {
+    res.setHeader(
+      "Access-Control-Allow-Origin",
+      "https://personal-finance-tracker-frontend-azure.vercel.app"
+    ); // Allow specific origin
+    res.setHeader(
+      "Access-Control-Allow-Methods",
+      "GET, POST, OPTIONS, PUT, PATCH, DELETE"
+    );
+    res.setHeader(
+      "Access-Control-Allow-Headers",
+      "Content-Type, Authorization"
+    );
+    next();
+  },
+  signup.signupFunction
+);
+
+router.post(
+  "/login",
+  (req, res, next) => {
+    res.setHeader(
+      "Access-Control-Allow-Origin",
+      "https://personal-finance-tracker-frontend-azure.vercel.app"
+    ); // Allow specific origin
+    res.setHeader(
+      "Access-Control-Allow-Methods",
+      "GET, POST, OPTIONS, PUT, PATCH, DELETE"
+    );
+    res.setHeader(
+      "Access-Control-Allow-Headers",
+      "Content-Type, Authorization"
+    );
+    next();
+  },
+  login.loginFunction
+);
+
+router.post(
+  "/logout",
+  (req, res, next) => {
+    res.setHeader(
+      "Access-Control-Allow-Origin",
+      "https://personal-finance-tracker-frontend-azure.vercel.app"
+    ); // Allow specific origin
+    res.setHeader(
+      "Access-Control-Allow-Methods",
+      "GET, POST, OPTIONS, PUT, PATCH, DELETE"
+    );
+    res.setHeader(
+      "Access-Control-Allow-Headers",
+      "Content-Type, Authorization"
+    );
+    next();
+  },
+  logout.logoutFunction
+);
+
+router.post(
+  "/data",
+  (req, res, next) => {
+    res.setHeader(
+      "Access-Control-Allow-Origin",
+      "https://personal-finance-tracker-frontend-azure.vercel.app"
+    ); // Allow specific origin
+    res.setHeader(
+      "Access-Control-Allow-Methods",
+      "GET, POST, OPTIONS, PUT, PATCH, DELETE"
+    );
+    res.setHeader(
+      "Access-Control-Allow-Headers",
+      "Content-Type, Authorization"
+    );
+    next();
+  },
+  data.getDataFunction
+);
+
+router.get(
+  "/userData/:username",
+  (req, res, next) => {
+    res.setHeader(
+      "Access-Control-Allow-Origin",
+      "https://personal-finance-tracker-frontend-azure.vercel.app"
+    ); // Allow specific origin
+    res.setHeader(
+      "Access-Control-Allow-Methods",
+      "GET, POST, OPTIONS, PUT, PATCH, DELETE"
+    );
+    res.setHeader(
+      "Access-Control-Allow-Headers",
+      "Content-Type, Authorization"
+    );
+    next();
+  },
+  data.getUserDataFunction
+);
 
 module.exports = router;
