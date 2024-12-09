@@ -10,7 +10,8 @@ const app = express();
 app.use(
   cors({
     origin: [
-      "https://personal-finance-tracker-frontend-azure.vercel.app", // production frontend
+      "https://personal-finance-tracker-frontend-azure.vercel.app",
+      "https://personal-finance-tracker-frontend-azure.vercel.app/user/login",
       "http://localhost:3000", // local development frontend (if applicable)
     ],
     methods: ["GET", "POST", "PUT", "DELETE"],
