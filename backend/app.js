@@ -9,11 +9,7 @@ const app = express();
 // Middleware
 app.use(
   cors({
-    origin: [
-      "https://personal-finance-tracker-frontend-azure.vercel.app",
-      "https://personal-finance-tracker-frontend-azure.vercel.app/user/login",
-      "http://localhost:3000", // local development frontend (if applicable)
-    ],
+    origin: ["https://personal-finance-tracker-frontend-azure.vercel.app/"],
     methods: ["GET", "POST", "PUT", "DELETE"],
     allowedHeaders: ["Content-Type", "Authorization"],
     credentials: true, // Allow credentials (cookies)
