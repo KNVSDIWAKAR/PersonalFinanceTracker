@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
-import maleProfilePic from "../Asserts/maleAvatar.png";
-import femaleProfilePic from "../Asserts/femaleAvatar.png";
-import SideBar from "./SideBar";
-import "../dashboard/Styles/Profile.css";
+import maleProfilePic from "../Asserts/maleAvatar.png"; // Your male profile picture
+import femaleProfilePic from "../Asserts/femaleAvatar.png"; // Your female profile picture
+import SideBar from "./SideBar"; // Assuming you have a Sidebar component
+import "../dashboard/Styles/Profile.css"; // Import your CSS styles for the profile
 
 const Profile = ({ handleAuthentication }) => {
   const username = localStorage.getItem("username");
@@ -14,6 +14,10 @@ const Profile = ({ handleAuthentication }) => {
     phone: "",
     age: 0,
     gender: "",
+    balance: 0,
+    income: 0,
+    savings: 0,
+    expenses: 0,
   });
 
   useEffect(() => {
@@ -33,11 +37,11 @@ const Profile = ({ handleAuthentication }) => {
         console.error("Error fetching user data:", error.message);
       }
     };
-    fetchUserData();
+    if (username) fetchUserData();
   }, [username]);
 
   return (
-    <div className="profilecontainer">
+    <div className="profile-container">
       <SideBar handleAuthentication={handleAuthentication} />
       <div
         style={{
@@ -50,7 +54,7 @@ const Profile = ({ handleAuthentication }) => {
           boxShadow: "0 4px 8px rgba(0, 0, 0, 0.5)",
           fontFamily: "Arial, sans-serif",
         }}
-        className="profile-container"
+        className="profile-details-container"
       >
         <div
           style={{
@@ -67,22 +71,22 @@ const Profile = ({ handleAuthentication }) => {
               position: "absolute",
               width: "150px",
               height: "150px",
-              background: "#3C3C3D ",
+              background: "#3C3C3D",
               backdropFilter: "blur(10px)",
               borderRadius: "50%",
               zIndex: 1,
             }}
           ></div>
 
-          {/* Image */}
+          {/* Profile Picture */}
           <img
-            src={userData.gender === "Male" ? femaleProfilePic : maleProfilePic}
+            src={userData.gender === "Male" ? maleProfilePic : femaleProfilePic}
             alt="Profile"
             style={{
               borderRadius: "50%",
               width: "150px",
               height: "150px",
-              position: "relative", // Ensure it layers above the background div
+              position: "relative",
               zIndex: 2,
             }}
           />
@@ -97,14 +101,20 @@ const Profile = ({ handleAuthentication }) => {
         >
           {userData.username}
         </h2>
+
         <div style={{ lineHeight: "2", fontSize: "16px", color: "#d3d3d3" }}>
+          {/* User Data Display */}
           {[
-            { label: "Firstname", value: userData.firstName },
-            { label: "Lastname", value: userData.lastName },
+            { label: "First Name", value: userData.firstName },
+            { label: "Last Name", value: userData.lastName },
             { label: "Email", value: userData.email },
             { label: "Phone", value: userData.phone },
             { label: "Age", value: userData.age },
             { label: "Gender", value: userData.gender },
+            { label: "Balance", value: userData.balance },
+            { label: "Income", value: userData.income },
+            { label: "Savings", value: userData.savings },
+            { label: "Expenses", value: userData.expenses },
           ].map((item, index) => (
             <div
               key={index}
