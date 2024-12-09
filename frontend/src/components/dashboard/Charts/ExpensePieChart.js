@@ -9,7 +9,7 @@ const ExpensePieChart = () => {
     const fetchData = async () => {
       try {
         const response = await fetch(
-          `http://localhost:814/txn/chartData/${username}`
+          `https://personal-finance-tracker-backend-five.vercel.app/txn/chartData/${username}`
         ); // Use username in API call
         const result = await response.json();
 

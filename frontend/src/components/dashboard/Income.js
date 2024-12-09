@@ -37,13 +37,16 @@ const Income = ({ handleAuthentication }) => {
     };
 
     try {
-      const response = await fetch("http://localhost:814/income/createIncome", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(incomeData),
-      });
+      const response = await fetch(
+        "https://personal-finance-tracker-backend-five.vercel.app/income/createIncome",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(incomeData),
+        }
+      );
 
       if (response.ok) {
         const result = await response.json();

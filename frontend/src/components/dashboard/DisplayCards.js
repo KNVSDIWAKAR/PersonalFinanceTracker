@@ -10,7 +10,7 @@ const DisplayCards = ({ handleAuthentication }) => {
     const fetchCardData = async () => {
       try {
         const response = await fetch(
-          `http://localhost:814/card/getCards/${username}`
+          `https://personal-finance-tracker-backend-five.vercel.app/card/getCards/${username}`
         );
         if (!response.ok) {
           throw new Error("Failed to fetch card data");

@@ -20,7 +20,7 @@ const Profile = ({ handleAuthentication }) => {
     const fetchUserData = async () => {
       try {
         const response = await fetch(
-          `http://localhost:814/user/userData/${username}`
+          `https://personal-finance-tracker-backend-five.vercel.app/user/userData/${username}`
         );
 
         if (!response.ok) {

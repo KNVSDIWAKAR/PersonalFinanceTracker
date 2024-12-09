@@ -19,7 +19,10 @@ const Login = ({ handleAuthentication }) => {
 
     console.log(username, password);
 
-    const res = await axios.post("http://localhost:814/user/login", data);
+    const res = await axios.post(
+      "https://personal-finance-tracker-backend-five.vercel.app/user/login",
+      data
+    );
     console.log(res);
     if (res.data.status === 200) {
       handleAuthentication(true);

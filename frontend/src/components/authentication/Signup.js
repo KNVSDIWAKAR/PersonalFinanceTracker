@@ -30,7 +30,10 @@ const Signup = ({ handleAuthentication }) => {
 
     try {
       // Send the signup request
-      const res = await axios.post("http://localhost:814/user/signup", data);
+      const res = await axios.post(
+        "https://personal-finance-tracker-backend-five.vercel.app/user/signup",
+        data
+      );
 
       // Handle success response
       if (res.data.status === 200) {

@@ -26,13 +26,16 @@ const Transfer = ({ handleAuthentication }) => {
     };
 
     try {
-      const response = await fetch(`http://localhost:814/txn/createTxn`, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(newTransaction),
-      });
+      const response = await fetch(
+        `https://personal-finance-tracker-backend-five.vercel.app/txn/createTxn`,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(newTransaction),
+        }
+      );
 
       const data = await response.json();
 

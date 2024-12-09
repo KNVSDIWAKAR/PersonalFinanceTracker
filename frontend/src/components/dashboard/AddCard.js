@@ -30,13 +30,16 @@ const AddCard = ({ handleAuthentication }) => {
     e.preventDefault();
 
     try {
-      const response = await fetch("http://localhost:814/card/createCard", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(cardData),
-      });
+      const response = await fetch(
+        "https://personal-finance-tracker-backend-five.vercel.app/card/createCard",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(cardData),
+        }
+      );
 
       if (response.ok) {
         const result = await response.json();

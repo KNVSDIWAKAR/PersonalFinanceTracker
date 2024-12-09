@@ -20,7 +20,10 @@ function Overview() {
       username,
     };
     axios
-      .post(`http://localhost:814/user/data`, data)
+      .post(
+        `https://personal-finance-tracker-backend-five.vercel.app/user/data`,
+        data
+      )
       .then((response) => {
         if (response.data.success) {
           setFinanceData(response.data.data);

@@ -8,7 +8,7 @@ const Cards = () => {
     const fetchCards = async () => {
       try {
         const response = await fetch(
-          `http://localhost:814/card/recentCards/${username}`
+          `https://personal-finance-tracker-backend-five.vercel.app/card/recentCards/${username}`
         );
         if (!response.ok) {
           throw new Error("Failed to fetch cards");

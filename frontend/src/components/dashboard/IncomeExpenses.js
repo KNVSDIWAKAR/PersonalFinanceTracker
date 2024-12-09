@@ -33,7 +33,7 @@ function IncomeExpenses() {
     const fetchTransactions = async () => {
       try {
         const response = await fetch(
-          `http://localhost:814/txn/allTransactions/${username}`
+          `https://personal-finance-tracker-backend-five.vercel.app/txn/allTransactions/${username}`
         );
         if (!response.ok) {
           throw new Error("Failed to fetch transactions");

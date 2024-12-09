@@ -9,7 +9,7 @@ const LastTransaction = () => {
     const fetchTransactions = async () => {
       try {
         const response = await fetch(
-          `http://localhost:814/txn/recentTransactions/${username}`
+          `https://personal-finance-tracker-backend-five.vercel.app/txn/recentTransactions/${username}`
         );
         if (!response.ok) {
           throw new Error("Failed to fetch transactions");
