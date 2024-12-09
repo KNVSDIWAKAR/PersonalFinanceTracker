@@ -19,20 +19,14 @@ const Login = ({ handleAuthentication }) => {
 
     console.log(username, password);
 
-    axios
-      .post(
-        "https://personal-finance-tracker-backend-five.vercel.app/user/login",
-        data,
-        {
-          withCredentials: true,
-        }
-      )
-      .then((response) => {
-        console.log("Login successful:", response);
-      })
-      .catch((error) => {
-        console.error("Error during login:", error);
-      });
+    const res = await axios.post(
+      "https://personal-finance-tracker-backend-five.vercel.app/user/login",
+      data,
+      {
+        withCredentials: true,
+      }
+    );
+    console.log(res);
     if (res.data.status === 200) {
       handleAuthentication(true);
       navigate("/dashboard");
