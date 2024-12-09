@@ -9,7 +9,8 @@ const app = express();
 app.use(
   cors({
     origin: "https://personal-finance-tracker-frontend-azure.vercel.app",
-    methods: ["POST", "GET"],
+    methods: ["GET", "POST", "PUT", "DELETE"],
+    allowedHeaders: ["Content-Type", "Authorization"],
     credentials: true,
   })
 );
