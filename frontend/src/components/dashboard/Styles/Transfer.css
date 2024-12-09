@@ -1,0 +1,114 @@
+/* General Layout for the Transfer Page */
+.transfercontainer {
+  display: flex;
+  gap: 10px;
+}
+.transfer-container {
+  background-color: #1e1e1f;
+  border: 1px solid #d3d3d3;
+  border-radius: 5px;
+  width: 80%;
+  padding: 20px;
+}
+
+h2,
+h3 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+label {
+  color: #d3d3d3;
+}
+.transfer-form {
+  display: grid;
+  color: #d3d3d3;
+  gap: 20px;
+  max-width: 500px;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  font-weight: bold;
+}
+
+.form-group input,
+.form-group select {
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ddd;
+  background-color: #1e1e1f;
+  border-radius: 4px;
+}
+
+button.btn-transfer {
+  padding: 10px;
+  background-color: #282829;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+button.btn-transfer:hover {
+  background-color: #45a049;
+}
+
+/* Table for Transaction Details */
+.transaction-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 40px;
+}
+
+.transaction-table th,
+.transaction-table td {
+  border: 1px solid #ddd;
+  padding: 12px;
+  text-align: left;
+}
+
+.transaction-table th {
+  background-color: #007bff;
+  color: white;
+}
+
+.transaction-table tr:hover {
+  background-color: #f1f1f1;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .transfer-container {
+    padding: 15px;
+  }
+
+  .transfer-form {
+    max-width: 100%;
+  }
+
+  .form-group label {
+    font-size: 0.9rem;
+  }
+
+  .form-group input,
+  .form-group select {
+    font-size: 0.9rem;
+  }
+
+  button.btn-transfer {
+    font-size: 14px;
+  }
+
+  .transaction-table th,
+  .transaction-table td {
+    padding: 8px;
+    font-size: 0.9rem;
+  }
+}

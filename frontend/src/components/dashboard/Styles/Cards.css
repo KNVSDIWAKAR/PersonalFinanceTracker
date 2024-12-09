@@ -1,0 +1,19 @@
+.cardscontainer {
+  display: flex;
+  gap: 10px;
+}
+.cards-container {
+  background-color: #1e1e1f;
+  border-radius: 5px;
+  min-height: 300px;
+  max-height: 500px;
+}
+
+.d1 {
+  background-color: #1e1e1f;
+  border: 1px solid #d3d3d3;
+  border-radius: 5px;
+  width: 80%;
+  padding: 20px;
+  height: 100vh;
+}

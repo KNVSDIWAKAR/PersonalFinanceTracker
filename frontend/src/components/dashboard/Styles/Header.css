@@ -1,0 +1,21 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+}
+
+.header-right input {
+  margin-right: 20px;
+  padding: 5px;
+}
+
+.icons i {
+  margin-left: 10px;
+  cursor: pointer;
+}

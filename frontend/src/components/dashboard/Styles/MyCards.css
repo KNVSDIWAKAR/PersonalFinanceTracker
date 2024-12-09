@@ -1,0 +1,91 @@
+.my-cards {
+  margin-bottom: 20px;
+  font-family: "Arial", sans-serif;
+  border: 1px solid #f4f5f7;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.cards {
+  display: flex;
+  width: 50%;
+  align-items: center;
+  padding: 20px;
+  gap: 40px;
+}
+
+.card-item {
+  position: relative;
+  flex: 0 0 300px;
+  padding: 20px;
+  border-radius: 15px;
+  color: #d6d6d6;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #282829;
+}
+
+.card-item .chip {
+  width: 40px;
+  height: 30px;
+  background-color: #f0c040;
+  border-radius: 4px;
+  position: absolute;
+  top: 15px;
+  left: 15px;
+}
+
+.mastercard-logo {
+  width: 50px;
+  height: 30px;
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/a/a4/Mastercard_2019_logo.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+}
+
+.card-number {
+  margin-top: 50px;
+  font-size: 18px;
+  letter-spacing: 3px;
+  text-align: left;
+}
+
+.card-id {
+  text-align: left;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 12px;
+}
+
+.card-holder,
+.expiry-date {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 12px;
+}
+
+.card-holder strong,
+.expiry-date strong {
+  font-size: 14px;
+}
+
+.add-card {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border-radius: 10px;
+  cursor: pointer;
+  border: none;
+  margin-left: 20px;
+}
