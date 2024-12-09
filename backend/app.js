@@ -10,6 +10,7 @@ app.use(
   cors({
     origin: "https://personal-finance-tracker-frontend-azure.vercel.app",
     methods: ["POST", "GET"],
+    credentials: true,
   })
 );
 app.use(express.json());
