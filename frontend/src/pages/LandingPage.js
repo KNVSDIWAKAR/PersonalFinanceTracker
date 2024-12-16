@@ -201,9 +201,7 @@ const LandingPage = () => {
           <li className="navbar-item">
             <Link to="/signup">Signup</Link>
           </li>
-          <li className="navbar-item">
-            <Link to="/dashboard">Dashboard</Link>
-          </li>
+          
         </ul>
       </nav>
       <div className="content">
